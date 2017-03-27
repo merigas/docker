@@ -1,0 +1,14 @@
+version: '2'
+services:
+  mariadb:
+    build: 'mariadb/.'
+    #image: versionit/sampledb
+    ports:
+      - "3306:3306"
+    environment:
+      - MYSQL_ROOT_PASSWORD=root
+  tomcat: 
+    build: 'tomcat/.'
+    ports:
+      - "8009:8009"
+      - "8080:8080"
